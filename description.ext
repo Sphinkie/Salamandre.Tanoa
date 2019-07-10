@@ -1,0 +1,166 @@
+
+// ----------------------------------------------------------------------------------
+// Multiplayer configuration
+// ----------------------------------------------------------------------------------
+class Header
+{
+	gameType =  Coop;	// Game type
+	minPlayers =  1;	// minimum number of players the mission supports
+	maxPlayers =  2;	// maximum number of players the mission supports
+};
+
+// ----------------------------------------------------------------------------------
+// Messages during laoding mission
+// ----------------------------------------------------------------------------------
+author			= "Sphinkie";
+OnLoadName		= "Operation Salamandre";
+OnLoadMission	= "Your group is tasked to capture an ennemy officer.";
+loadScreen      = "briefing.jpg";
+
+// ----------------------------------------------------------------------------------
+// Respawn configuration
+// ----------------------------------------------------------------------------------
+respawn = 1;		// Default: 0 for SP, 1 for MP
+//respawn = "BASE";	// NONE BIRD INSTANT BASE GROUP SIDE
+respawnButton = 0;  // Enable or disable the respawn button in the menu for INSTANT and BASE respawn types. 0: disabled - 1: enabled. Default: 1
+respawnDelay = 30;  // Set respawn delay in seconds.
+respawnDialog = 1;  // Show the scoreboard and respawn countdown timer for a player if he is killed with respawn type 3.
+
+// ----------------------------------------------------------------------------------
+// Define Task titles and descriptions.
+// ----------------------------------------------------------------------------------
+class CfgTaskDescriptions
+{
+	class task_heli
+	{
+		title		= "Embark in helicopter";
+		description	= "Embark in <marker name='marker_heli'>helicopter UH-80 Ghost Hawk</marker>. Ask for Take-off with your radio 0-0.";
+		marker		= "marker_heli";
+	};
+	class task_lz
+	{
+		title		= "Jump and regroup at meeting point";
+		description	= "After parachute jump, regroup at the <marker name='marker_LZ'>Meeting Point</marker>. A friendly civilian is waiting you there. He marked the landing zone with IR beacons, so wear your NVG.";
+		marker		= "marker_LZ";
+	};
+	class task_chkpt
+	{
+		title		= "Take control of the checkpoint";
+		description	= "Take the control of the checkpoint (somewhere on <marker name='marker_chkpt'>this road</marker>) by eliminating all ennemy presence. Our spotter will help you to find the checkpoint location.";
+		marker		= "marker_chkpt";
+	};
+	class task_capture
+	{
+		title		= "Capture officer";
+		description	= "When his car is coming at the checkpoint, stop it and capture the CSAT officer Col Fahim. He MUST NOT be killed NOR reach the <marker name='marker_airport'>St-George Airport</marker>.";
+		marker		= "marker_chkpt";
+	};
+	class task_boat
+	{
+		title		= "Find escape boat";
+		description	= "With Col. Fahim, regroup with the spotter at the escape boat in <marker name='marker_moddergat'>Moddergat village</marker>, and leave the island.";
+		marker		= "marker_TZ";
+	};
+	class task_evac
+	{
+		title		= "Evacuation";
+		description	= "With Col. Fahim and the spotter, leave <marker name='marker_bay'>Moddergat bay</marker> safely.";
+		marker		= "marker_bay";
+	};
+};
+
+// ----------------------------------------------------------------------------------
+// Final debriefing
+// ----------------------------------------------------------------------------------
+class CfgDebriefing
+{  
+	class MISSION_SUCCESS
+	{
+        title = "MISSION ACCOMPLISHED";					    // Titre qui apparait en gros
+        subtitle = "Colonel Fahim was successfully exfiltred.";      // Sous-titre qui apparait en-dessous du titre
+        description = "Bravo, you capture the officer and bring him back to the Base !";
+//        backgroundPicture = "";							// backgroundPicture : Image de fond. Par défaut, c'est l'image définie dans "loadScreen" qui est prise en compte.
+        picture = "briefing.jpg"; 							// Image qui apparait au-dessus du titre
+        pictureColor[] = {1,1,1,1};							// Couleur de l'image. Si vous laissez "{1,1,1,1}", c'est la couleur de l'image qui sera prise en compte.
+	};
+
+	class FAILURE_1
+	{
+        title = "MISSION FAILED";
+        subtitle = "The officer has reached the St-George Airport.";
+        description = "You did not manage to capture the officer before he reaches the Airport.";
+        picture = "briefing.jpg";
+        pictureColor[] = {1,1,1,1};
+	};
+	class FAILURE_2
+	{
+        title = "MISSION FAILED";
+        subtitle = "The officer is dead.";
+        description = "You did not manage to keep the officer alive until he reaches our base.";
+        picture = "briefing.jpg";
+        pictureColor[] = {1,1,1,1};
+	};};
+
+// ----------------------------------------------------------------------------------
+// Sound files (voices)
+// ----------------------------------------------------------------------------------
+class CfgSounds
+{
+	sounds[] = {};
+	class friend01
+	{
+		name = "friend01";
+		sound[] = {"\voices\friend01.ogg", db+20, 1.0};  			// filename, volume, pitch
+		titles[] = {1,"Go East, follow the road direction.",		// subtitle delay in seconds, subtitle text 
+					3,"You will find the army checkpoint.",
+					5,"Our observer will contact you with the radio."};
+	};
+	class officer01
+	{
+		name = "officer01";
+		sound[] = {"\voices\officer01.ogg", db+20, 1.0};  			// filename, volume, pitch
+		titles[] = {1,"Don't shoot!",
+					3,"I surrender!"};
+	};
+
+};
+
+
+// ----------------------------------------------------------------------------------
+// Radio Messages
+// ----------------------------------------------------------------------------------
+class CfgRadio
+{
+	sounds[] = {};
+	class RadioMsg1
+	{
+		name = "RadioMsg1";
+		sound[] = {"\voices\RadioMsg1.ogg", db+20, 1.0};
+		title = "OK guys! The checkpoint is located at 110.039. Go there now.";
+	};
+	class radioMsgCar1
+	{
+		name = "radioMsgCar1";
+		sound[] = {"\voices\RadioMsg1.ogg", db+20, 1.0};
+		title = "Warning! A civilian vehicle is coming. Open the gate for him.";
+	};
+	class radioMsgCar2
+	{
+		name = "radioMsgCar2";
+		sound[] = {"\voices\RadioMsg1.ogg", db+20, 1.0};
+		title = "Another civilian car coming. Let him pass.";
+	};
+	class radioMsgCar3
+	{
+		name = "radioMsgCar3";
+		sound[] = {"\voices\RadioMsg1.ogg", db+20, 1.0};
+		title = "Attention! Target in approach. Close the gate and stop the car! Stay ready!";
+	};
+	class radioMsg4
+	{
+		name = "radioMsg4";
+		sound[] = {"\voices\RadioMsg1.ogg", db+20, 1.0};
+		title = "Good job! Go to the evacuation boat quicky, before the alarm is raised. I'll join you on the way.";
+	};
+};
+

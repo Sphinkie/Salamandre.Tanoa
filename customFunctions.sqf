@@ -104,51 +104,25 @@ FNC_completeTask_1 =
 FNC_completeTask_2 =
 {
 	if (["task_chkpt"] call BIS_fnc_taskExists) then { ["task_chkpt" ,"SUCCEEDED"] call BIS_fnc_taskSetState; };
-	sleep 2;
 	"task_capture" call BIS_fnc_taskSetCurrent;
 };
 
 // For trigger "chauffeur !alive"
 FNC_completeTask_3 =
 {
-	sleep 2;
-	// if the colonel is still alive:
-	if (alive officer) then
-	{
-		// The officer get out of the car
-		unassignVehicle officer;
-		officer action ["Getout", officercar];
-		sleep 1;
-		// The officer says: please dont shoot
-		officer setCaptive true;
-		officer say "officer01";
-		sleep 10;
-		// The officer join the group
-		officer sideChat "Don't shoot! I'm following you.";
-		[officer] joinSilent (group player);
-		// Task is complete
-		if (["task_capture"] call BIS_fnc_taskExists) then { ["task_capture" ,"SUCCEEDED"] call BIS_fnc_taskSetState; };
-		sleep 2;
-		"task_boat" call BIS_fnc_taskSetCurrent;
-		// Spotter join the group
-		sleep 10;
-		spotter sideRadio "radioMsg4";
-		[spotter] join (group player);
-		spotter move (getMarkerPos "marker_lz");
-	};
+	if (["task_capture"] call BIS_fnc_taskExists) then { ["task_capture" ,"SUCCEEDED"] call BIS_fnc_taskSetState; };
+	"task_boat" call BIS_fnc_taskSetCurrent;
 };
 
 FNC_completeTask_4 =
 {
 	if (["task_boat"] call BIS_fnc_taskExists) then { ["task_boat" ,"SUCCEEDED"] call BIS_fnc_taskSetState; };
-	sleep 2;
 	"task_evac" call BIS_fnc_taskSetCurrent;
 };
 
 FNC_completeTask_5 =
 {
 	if (["task_evac"] call BIS_fnc_taskExists) then { ["task_evac" ,"SUCCEEDED"] call BIS_fnc_taskSetState; };
-	sleep 2;
 	["MISSION_SUCCESS", false] call BIS_fnc_endMission;
 };
 
@@ -188,7 +162,6 @@ FNC_taskEvac_Done =
 FNC_failTask_1 =
 {
 	if (["task_capture"] call BIS_fnc_taskExists) then { ["task_capture" ,"FAILED"] call BIS_fnc_taskSetState; };
-	// sleep 2;
 	["FAILURE_1", false] call BIS_fnc_endMission;
 };
 
@@ -196,10 +169,14 @@ FNC_failTask_1 =
 FNC_failTask_2 =
 {
 	if (["task_capture"] call BIS_fnc_taskExists) then { ["task_capture" ,"FAILED"] call BIS_fnc_taskSetState; };
-	// sleep 2;
 	["FAILURE_2", false] call BIS_fnc_endMission;
 };
 
+FNC_failTask_5 =
+{
+	if (["task_evac"] call BIS_fnc_taskExists) then { ["task_evac" ,"FAILED"] call BIS_fnc_taskSetState; };
+	["FAILURE_3", false] call BIS_fnc_endMission;
+};
 
 // ----------------------------------------------------------------------------------------------------------
 // Debug function

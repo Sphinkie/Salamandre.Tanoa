@@ -99,7 +99,16 @@ class CfgDebriefing
         description = "You did not manage to keep the officer alive until he reaches our base.";
         picture = "briefing.jpg";
         pictureColor[] = {1,1,1,1};
-	};};
+	};
+	class FAILURE_3
+	{
+        title = "MISSION FAILED";
+        subtitle = "Exfiltration failed.";
+        description = "You did not manage to keep the officer with you, out of the island.";
+        picture = "briefing.jpg";
+        pictureColor[] = {1,1,1,1};
+	};
+};
 
 // ----------------------------------------------------------------------------------
 // Sound files (voices)

@@ -61,7 +61,6 @@ _trg_2 setTriggerStatements ["this", "savegame;", ""];
 _trg_3 = createTrigger ["EmptyDetector", getPos chauffeur];
 _trg_3 setTriggerArea [10, 10, 0, false, 10];
 _trg_3 setTriggerActivation ["EAST", "PRESENT", false];
-_trg_3 setTriggerStatements ["!alive chauffeur", "call FNC_completeTask_3", ""];
-//_trg_3 setTriggerStatements ["!alive chauffeur", "null = []execVM ""ChauffeurDead.sqf""; ", ""];
+_trg_3 setTriggerStatements ["!alive chauffeur", "null = []execVM 'ChauffeurDead.sqf' ", ""];
 
 

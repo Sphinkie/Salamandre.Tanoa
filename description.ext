@@ -120,16 +120,46 @@ class CfgSounds
 	{
 		name = "friend01";
 		sound[] = {"\voices\friend01.ogg", db+20, 1.0};  			// filename, volume, pitch
-		titles[] = {1,"Go East, follow the road direction.",		// subtitle delay in seconds, subtitle text 
+		titles[] = {0,"Go East, follow the road direction.",		// subtitle delay in seconds, subtitle text 
 					3,"You will find the army checkpoint.",
-					5,"Our observer will contact you with the radio."};
+					5,"Your spotter will contact you by radio."};
 	};
 	class officer01
 	{
 		name = "officer01";
-		sound[] = {"\voices\officer01.ogg", db+20, 1.0};  			// filename, volume, pitch
-		titles[] = {1,"Don't shoot!",
+		sound[] = {"\voices\officer01.ogg", db+20, 1.0};
+		titles[] = {0,"Don't shoot!  Don't shoot!",
 					3,"I surrender!"};
+	};
+	class officer02
+	{
+		name = "officer02";
+		sound[] = {"\voices\officer02.ogg", db+20, 1.0};
+		titles[] = {0,"Quiet!  I'm following you!"};
+	};
+	class pilot01
+	{
+		name = "pilot01";	sound[] = {"\voices\pilot01.ogg", db+20, 1.0};	titles[]={0,""};
+	};
+	class pilot02
+	{
+		name = "pilot02";	sound[] = {"\voices\pilot02.ogg", db+20, 1.0};	titles[]={0,""};
+	};
+	class pilot03
+	{
+		name = "pilot03";	sound[] = {"\voices\pilot03.ogg", db+20, 1.0};	titles[]={0,""};
+	};
+	class pilot04
+	{
+		name = "pilot04";	sound[] = {"\voices\pilot04.ogg", db+20, 1.0};	titles[]={0,""};
+	};
+	class spotter01
+	{
+		name = "spotter01";	sound[] = {"\voices\spotter01.ogg", db+20, 1.0};	titles[]={0,""};
+	};
+	class spotter02
+	{
+		name = "spotter02";	sound[] = {"\voices\spotter02.ogg", db+20, 1.0};	titles[]={0,""};
 	};
 
 };
@@ -141,34 +171,34 @@ class CfgSounds
 class CfgRadio
 {
 	sounds[] = {};
-	class RadioMsg1
+	class spotterRadio01
 	{
-		name = "RadioMsg1";
-		sound[] = {"\voices\RadioMsg1.ogg", db+20, 1.0};
+		name = "spotterRadio01";
+		sound[] = {"\voices\spotterRadio01.ogg", db+20, 1.0};
 		title = "OK guys! The checkpoint is located at 110.039. Go there now.";
 	};
-	class radioMsgCar1
+	class spotterRadio02
 	{
-		name = "radioMsgCar1";
-		sound[] = {"\voices\RadioMsg1.ogg", db+20, 1.0};
+		name = "spotterRadio02";
+		sound[] = {"\voices\spotterRadio02.ogg", db+20, 1.0};
 		title = "Warning! A civilian vehicle is coming. Open the gate for him.";
 	};
-	class radioMsgCar2
+	class spotterRadio03
 	{
-		name = "radioMsgCar2";
-		sound[] = {"\voices\RadioMsg1.ogg", db+20, 1.0};
+		name = "spotterRadio03";
+		sound[] = {"\voices\spotterRadio03.ogg", db+20, 1.0};
 		title = "Another civilian car coming. Let him pass.";
 	};
-	class radioMsgCar3
+	class spotterRadio04
 	{
-		name = "radioMsgCar3";
-		sound[] = {"\voices\RadioMsg1.ogg", db+20, 1.0};
+		name = "spotterRadio04";
+		sound[] = {"\voices\spotterRadio04.ogg", db+20, 1.0};
 		title = "Attention! Target in approach. Close the gate and stop the car! Stay ready!";
 	};
-	class radioMsg4
+	class spotterRadio05
 	{
-		name = "radioMsg4";
-		sound[] = {"\voices\RadioMsg1.ogg", db+20, 1.0};
+		name = "spotterRadio05";
+		sound[] = {"\voices\spotterRadio05.ogg", db+20, 1.0};
 		title = "Good job! Go to the evacuation boat quicky, before the alarm is raised. I'll join you on the way.";
 	};
 };

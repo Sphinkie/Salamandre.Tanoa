@@ -20,15 +20,15 @@ if (alive officer) then
 
 	// The officer join the group
 	[officer] joinSilent (group player);
-	officer sideChat "Don't shoot! I'm following you.";
-	(group player) setSpeedMode "NORMAL"
+	officer say "officer02";
+	(group player) setSpeedMode "NORMAL";
 
 	// Task is complete
 	call FNC_completeTask_3;
 	sleep 10;
 
 	// Spotter join the group
-	spotter sideRadio "radioMsg4";
+	spotter sideRadio "spotterRadio05";
 	[spotter] join (group player);
 	spotter move (getMarkerPos "marker_lz");
 	};

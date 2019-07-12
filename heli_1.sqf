@@ -12,6 +12,9 @@ call FNC_completeTask_0;
 
 sleep 10;
 spotter sideChat "Hello guys. Good to make this mission with you.";
+playSound "spotter01";
+
 sleep 10;
 spotter sideChat "I am your spotter. I'll assist you in this operation...";
+playSound "spotter02";
 

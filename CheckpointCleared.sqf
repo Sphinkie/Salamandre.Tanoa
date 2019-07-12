@@ -7,19 +7,19 @@ call FNC_completeTask_2;
 
 sleep 20;
 // Spotter send a message, and car #1 start coming
-spotter sideRadio "radioMsgCar1";
+spotter sideRadio "spotterRadio02";
 variableActivationCar1 = true;
 
 
 sleep 90;
 // Spotter send a message, and car #2 start coming
-spotter sideRadio "radioMsgCar2";
+spotter sideRadio "spotterRadio03";
 variableActivationCar2 = true;
 
 
 sleep 90;
 // Spotter send a message, and car #3 start coming (officer car)
-spotter sideRadio "radioMsgCar3";
+spotter sideRadio "spotterRadio04";
 // We position the car at its starting point
 _p1 = getMarkerPos "marker_officer";
 officercar setVehiclePosition[_p1,[],0];

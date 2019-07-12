@@ -1,0 +1,64 @@
+// ----------------------------------------------------------------------------------
+// CfgSounds
+
+		driver01	(plein air)
+			"bonne chance lieutenant"
+
+		friend01	(plein air)
+			"Allez vers l'Est. Longez la petite route. Le checkpoint est par là. Spotter vous contactera par radio."
+			"Go East, follow the road direction."  
+			"You will find the army checkpoint."  
+			"Your spotter will contact you by radio."
+
+		
+		officer01	(plein air)
+			"Don't shoot!     Don't shoot! "
+			"I surrender!"
+
+		officer02	(plein air)
+			Quiet! I'm following you.
+
+		spotter01 	(cabine)
+			Salut les gars. Content de faire cette mission avec vous.
+		
+		spotter02 	(cabine)
+			Moi, je suis spotter, votre repéreur. Vous pouvez compter sur moi.
+		
+		
+					
+// ----------------------------------------------------------------------------------
+// Radio Messages
+// ----------------------------------------------------------------------------------
+	spotter = "RadioMsg1";
+		"OK. le checkpoint à neutraliser est identifié aux coordonnées 110.039. Allez-y maintenant."
+		"OK guys! The checkpoint is located at 110.039. Go there now.";
+
+	spotter = "radioMsgCar1";
+		"Attention. Véhicule civil en approche. Ouvrez-lui la barrière."
+		"Warning! A civilian vehicle is coming. Open the gate for him.";
+
+	spotter = "radioMsgCar2";
+		"Attention. Un autre véhicule civil arrive au checkpoint. Laissez-le passer."
+		"Another civilian car coming. Let him pass.";
+
+	spotter = "radioMsgCar3";
+		"Attention. Attention. Cible en approche. Refermez la barrière et stoppez-les. Tenez-vous prêts."
+		"Attention! Target in approach. Close the gate and stop the car! Stay ready!";
+
+	spotter = "radioMsg4";
+		"Good job. Aller, on file au zodiac, avant qu'ils ne donnent l'alarme. Retrouvez-moi sur le chemin."
+		"Good job! Go to the evacuation boat quicky, before the alarm is raised. I'll join you on the way.";
+
+	pilot01
+		"Un moment. On a un autre passager"
+		"Just a second. We have another passenger.";
+
+	pilot02 
+		"On arrive. Préparez-vous à sauter."
+		"Get ready for Jump !";
+		
+	pilot03
+		"Spotter, c'est à toi. Saute. Go!"
+		
+	pilot04
+		"Allez les guignols, c'est à vous. Go go go !"

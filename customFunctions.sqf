@@ -64,6 +64,8 @@ FNC_createTask_4 =
 {
 	[player,"task_boat",""] call BIS_fnc_taskCreate;
 	["task_boat","boat"] call BIS_fnc_taskSetType;
+	// Affichage des markers
+	"marker_TZ" setMarkerAlpha 1;
 };
 
 FNC_createTask_5 = 

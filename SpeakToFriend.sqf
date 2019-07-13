@@ -1,13 +1,13 @@
 // -----------------------------------------------------
-// On parle avec le friend
+// talking with friend at LZ
 // -----------------------------------------------------
 
 friend setRandomLip true;
 friend say "friend01";
-sleep 10;
 friend setRandomLip false;
 
-sleep 8;
+sleep 15;
+
 // friend goes away (sometimes with the car)
 friend assignAsDriver friendCar;
 friend move getMarkerPos "marker_moddergat";

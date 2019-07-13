@@ -15,17 +15,21 @@ if (alive officer) then
 
 	// The officer says: please dont shoot
 	officer setCaptive true;
+	officer setRandomLip true;
 	officer say "officer01";
+	officer setRandomLip false;
 	sleep 10;
 
 	// The officer join the group
 	[officer] joinSilent (group player);
+	officer setRandomLip true;
 	officer say "officer02";
 	(group player) setSpeedMode "NORMAL";
+	officer setRandomLip false;
 
 	// Task is complete
 	call FNC_completeTask_3;
-	sleep 10;
+	sleep 15;
 
 	// Spotter join the group
 	spotter sideRadio "spotterRadio05";

@@ -116,6 +116,10 @@ class CfgDebriefing
 class CfgSounds
 {
 	sounds[] = {};
+	class GoodLuck
+	{
+		name = "GoodLuck";	sound[] = {"\voices\GoodLuck.ogg", db+20, 1.0};	titles[]={0,""};
+	};
 	class friend01
 	{
 		name = "friend01";
@@ -157,11 +161,6 @@ class CfgSounds
 	{
 		name = "spotter01";	sound[] = {"\voices\spotter01.ogg", db+20, 1.0};	titles[]={0,""};
 	};
-	class spotter02
-	{
-		name = "spotter02";	sound[] = {"\voices\spotter02.ogg", db+20, 1.0};	titles[]={0,""};
-	};
-
 };
 
 

@@ -3,6 +3,8 @@
 // ------------------------------------------------------------------
 
 taxiDriver sideChat "Good luck !";
+playSound "GoodLuck";
+
 taxiDriver playAction "salute";
 sleep 3;	
 taxiDriver assignAsDriver taxi;

@@ -7,4 +7,5 @@
 call FNC_completeTask_1;
 
 sleep 60;
-spotter sideRadio "RadioMsg1";
+spotter sideRadio "spotterRadio01";
+

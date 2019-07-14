@@ -26,6 +26,8 @@ variableActivationCar1 = false;
 variableActivationCar2 = false;
 variableActivationCar3 = false;
 
+spotter setName["Spotter","Spotter","Spotter"];
+
 // ---------------------------------------------------------
 // Début de la mission
 // ---------------------------------------------------------

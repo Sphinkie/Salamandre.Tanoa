@@ -120,45 +120,39 @@ class CfgSounds
 	{
 		name = "GoodLuck";	sound[] = {"\voices\GoodLuck.ogg", db+20, 1.0};	titles[]={0,""};
 	};
-	class friend01
-	{
-		name = "friend01";
-		sound[] = {"\voices\friend01.ogg", db+20, 1.0};  			// filename, volume, pitch
-		titles[] = {0,"Go East, follow the road direction.",		// subtitle delay in seconds, subtitle text 
-					3,"You will find the army checkpoint.",
-					5,"Your spotter will contact you by radio."};
+	class friend01 {
+		name = "friend01";	sound[] = {"\voices\friend01.ogg", db+20, 1.0};  	titles[] = {0,"Go East..."};
 	};
-	class officer01
-	{
+	class friend02 {
+		name = "friend02";	sound[] = {"\voices\friend02.ogg", db+20, 1.0};  	titles[] = {0,"Follow the road direction. You will find the army checkpoint."};
+	};
+	class friend03 {
+		name = "friend03";	sound[] = {"\voices\friend03.ogg", db+20, 1.0};  	titles[] = {0,"Your spotter will contact you by radio."};
+	};
+	class officer01	{
 		name = "officer01";
-		sound[] = {"\voices\officer01.ogg", db+20, 1.0};
-		titles[] = {0,"Don't shoot!  Don't shoot!",
+		sound[] = {"\voices\officer01.ogg", db+20, 1.0};	// filename, volume, pitch
+		titles[] = {0,"Don't shoot!  Don't shoot!",	       // subtitle delay in seconds, subtitle text 
 					3,"I surrender!"};
 	};
-	class officer02
-	{
+	class officer02	{
 		name = "officer02";
 		sound[] = {"\voices\officer02.ogg", db+20, 1.0};
 		titles[] = {0,"Quiet!  I'm following you!"};
 	};
-	class pilot01
-	{
+	class pilot01 {
 		name = "pilot01";	sound[] = {"\voices\pilot01.ogg", db+20, 1.0};	titles[]={0,""};
 	};
-	class pilot02
-	{
+	class pilot02 {
 		name = "pilot02";	sound[] = {"\voices\pilot02.ogg", db+20, 1.0};	titles[]={0,""};
 	};
-	class pilot03
-	{
+	class pilot03 {
 		name = "pilot03";	sound[] = {"\voices\pilot03.ogg", db+20, 1.0};	titles[]={0,""};
 	};
-	class pilot04
-	{
+	class pilot04 {
 		name = "pilot04";	sound[] = {"\voices\pilot04.ogg", db+20, 1.0};	titles[]={0,""};
 	};
-	class spotter01
-	{
+	class spotter01 {
 		name = "spotter01";	sound[] = {"\voices\spotter01.ogg", db+20, 1.0};	titles[]={0,""};
 	};
 };

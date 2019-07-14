@@ -34,6 +34,6 @@ if (alive officer) then
 	// Spotter join the group
 	spotter sideRadio "spotterRadio05";
 	[spotter] join (group player);
-	spotter move (getMarkerPos "marker_lz");
+	spotter doMove (getMarkerPos "marker_lz");
 	};
 	

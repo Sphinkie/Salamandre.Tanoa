@@ -19,5 +19,5 @@ unassignVehicle spotter;
 spotter setPos (getMarkerPos "marker_spotter");
 sleep 2;
 heli animateDoor ["door_L",0];
-
+spotter addGoogles;
 

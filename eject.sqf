@@ -18,7 +18,7 @@ private ["_paras","_vehicle","_chuteHeight","_dir"];
 _vehicle = _this select 0; 
 _chuteheight = if ( count _this > 1 ) then { _this select 1 } else { 100 };
 _vehicle allowDamage false;
-_paras = assignedcargo _vehicle;
+_paras = assignedCargo _vehicle;
 _dir = direction _vehicle;    
 
 paraLandSafe = 
@@ -27,13 +27,13 @@ paraLandSafe =
 	_unit = _this select 0;
 	_chuteheight = _this select 1;
 	(vehicle _unit) allowDamage false;
-	if (isPlayer _unit) then {[_unit,_chuteheight] spawn OpenPlayerchute};
+	if (isPlayer _unit) then {[_unit,_chuteheight] spawn OpenPlayerChute};
 	waitUntil { isTouchingGround _unit || (position _unit select 2) < 1 };
 	_unit action ["eject", vehicle _unit];
 	sleep 1;
 	_inv = name _unit;
-	[_unit, [missionNamespace, format["%1%2", "Inventory",_inv]]] call BIS_fnc_loadInventory;// Reload Loadout.
-	_unit allowdamage true;// Now you can take damage.
+	[_unit, [missionNamespace, format["%1%2", "Inventory",_inv]]] call BIS_fnc_loadInventory;  // Reload Loadout.
+	_unit allowDamage true;// Now you can take damage.
 };
 
 OpenPlayerChute =
@@ -50,10 +50,10 @@ OpenPlayerChute =
 	[_x, [missionNamespace, format["%1%2", "Inventory",_inv]]] call BIS_fnc_saveInventory;// Save Loadout
 	removeBackpack _x;
 	_x disableCollisionWith _vehicle;// Sometimes units take damage when being ejected.
-	_x allowdamage false;// Trying to prevent damage.
-	_x addBackPack "B_parachute";
-	unassignvehicle _x;
-	moveout _x;
+	_x allowDamage false;// Trying to prevent damage.
+	_x addBackpack "B_parachute";
+	unassignVehicle _x;
+	moveOut _x;
 	_x setDir (_dir + 90);// Exit the chopper at right angles.
 	sleep 0.3;
 } forEach _paras;

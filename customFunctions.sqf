@@ -188,5 +188,5 @@ FNC_kill =
 	// kill all units at checkpoint
 	{
 		_x setDamage 1;
-	} foreach (list trg_chkpt);
+	} forEach (list trg_chkpt);
 }
